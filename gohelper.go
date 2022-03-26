@@ -216,3 +216,10 @@ func HasSpecialCharacters(str string) bool {
 
 	return false
 }
+
+// JoinIntSlice joins all values within slice into one string
+func JoinIntSlice(slice []int, delim string) string {
+	return strings.Trim(strings.Replace(fmt.Sprint(slice), " ", delim, -1), "[]")
+	// return strings.Trim(strings.Join(strings.Split(fmt.Sprint(a), " "), delim), "[]")
+	// return strings.Trim(strings.Join(strings.Fields(fmt.Sprint(a)), delim), "[]")
+}
